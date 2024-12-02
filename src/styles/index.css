@@ -1,0 +1,402 @@
+@charset "UTF-8";
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  box-sizing: border-box;
+  text-decoration: none;
+}
+
+:root {
+  --border: gainsboro;
+  --primary: blueviolet;
+  --white: #ffffff;
+  --secundary: whitesmoke;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+::selection {
+  color: var(--white);
+  background-color: var(--primary);
+}
+
+#descricao {
+  font-size: 20px;
+  color: gray;
+}
+
+span {
+  color: var(--primary);
+}
+
+body {
+  background-color: var(--secundary);
+}
+
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  padding: 20px;
+  background-color: var(--white);
+  border-bottom: 1px solid gainsboro;
+  /* box-shadow: 0px 0px 10px #00000008;*/
+  position: sticky;
+  top: 0; 
+}
+
+header .logo {
+  color: var(--primary);
+}
+
+header nav {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+}
+
+header nav a {
+  color: gray;
+  font-weight: 500;
+  transition: all .2s;
+}
+
+header nav a#inicial {
+  color: var(--primary);
+}
+
+a#getstart {
+  padding: 10px 20px;
+  background-color: var(--primary);
+  color: var(--white);
+  border-radius: .2rem;
+  border: 3px solid var(--primary);
+  transition: all .2s;
+}
+
+a#getstart:hover {
+  background-color: rgb(92, 11, 168);
+}
+
+a#getstart p {
+  z-index: 1;
+  position: absolute;
+  color: black;
+}
+
+header nav a:hover {
+  color: var(--primary);
+}
+
+header button {
+  padding: 10px;
+  border: none;
+  background-color: var(--primary);
+  color: white;
+  border-radius: .2rem;
+  cursor: pointer;
+  display: none;
+}
+
+@media (max-width: 768px) {
+  header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+    background-color: var(--white);
+    position: sticky;
+    top: 0;
+    box-shadow: 0px 0px 10px #00000012;
+    border-bottom: 1px solid gainsboro;
+  }    
+
+  header nav {
+    display: none;
+    gap: 20px;
+  }
+
+  header button {
+    padding: 10px;
+    border: none;
+    background-color: var(--primary);
+    color: white;
+    border-radius: .2rem;
+    cursor: pointer;
+    display: flex;
+  }
+}
+
+
+/* menu */
+.mn {
+  display: none;
+}
+
+.menu {
+  width: 100%;
+  height: auto;
+  background-color: var(--primary);
+  transition: all .3s;
+  display: flex;
+}
+
+.menu .links {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.menu a {
+  padding: 20px;
+  color: white;
+  width: 100%;
+  text-align: center;
+}
+
+.menu a:hover {
+  background-color: rgba(255, 255, 255, 0.099);
+}
+
+.banner {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  background-color: var(--white);
+}
+
+.banner .conteudo {
+    width: 550px;
+    padding: 20px 20px;
+}
+
+.banner .conteudo h1 {
+    font-size: 50px;
+}
+
+.banner .image {
+    width: 600px;
+    max-width: 100%;
+}
+
+.banner .image img {
+    width: 100%;
+}
+
+@media (max-width: 768px) {
+  .banner .conteudo {
+    width: 550px;
+    padding: 20px 20px;
+    text-align: center;
+  }
+  
+  .banner .conteudo h1 {
+    font-size: 30px;
+  }   
+}
+
+/*  */
+.bn-2 {
+  padding: 10% 0;
+}
+
+/*  */
+.container{
+  width: 100%;
+  height: auto;
+  padding: 10% 0;
+}
+
+.theme {
+  margin-bottom: 10%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0 20px;
+  text-align: center;
+}
+
+.theme h1 {
+  font-size: 40px;
+}
+
+@media (max-width: 768px) {
+  .theme {
+    margin-bottom: 10%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0 20px;
+    text-align: center;
+  }
+  
+  .theme h1 {
+    font-size: 30px;
+  }      
+}
+
+/*  */
+.cd-cards {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.cd-cards .cards {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.cd-cards .card {
+  width: 400px;
+  max-width: 90%;
+  height: 300px;
+  background-color: white;
+  box-shadow: 0px 0px 10px #00000008;
+  padding: 20px;
+  box-sizing: border-box;
+  border-radius: .2rem;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 10px;
+  border: 1px solid gainsboro;
+}
+
+.cd-cards .card p {
+  color: gray;
+}
+
+/*  */
+footer {
+  background-color: black;
+  color: #fff;
+  padding: 40px 0;
+  font-family: Arial, sans-serif;
+}
+
+.footer-container {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  max-width: 1200px;
+  margin: auto;
+  padding: 0 20px;
+}
+
+.footer-section {
+  flex: 1;
+  margin: 20px;
+}
+
+.footer-section h2 {
+  font-size: 18px;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+  border-bottom: 2px solid var(--primary);
+  display: inline-block;
+  padding-bottom: 10px;
+}
+
+.footer-section p,
+.footer-section ul,
+.footer-section li {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.footer-section ul li a {
+  color: #fff;
+  text-decoration: none;
+  margin-bottom: 10px;
+  display: block;
+  transition: color 0.3s;
+}
+
+.footer-section ul li a:hover {
+  color: var(--primary);
+}
+
+.footer-section .contact p {
+  margin-bottom: 10px;
+}
+
+.footer-section .social-links a {
+  color: #fff;
+  font-size: 20px;
+  margin-right: 10px;
+  transition: color 0.3s;
+}
+
+.footer-section .social-links a:hover {
+  color: var(--primary);
+}
+
+.footer-bottom {
+  text-align: center;
+  margin-top: 20px;
+  padding-top: 20px;
+  border-top: 1px solid #444;
+  font-size: 14px;
+}
+
+.footer-bottom p {
+  margin: 0;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  .footer-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .footer-section {
+    margin: 10px 0;
+  }
+
+  footer {
+    background-color: black;
+    color: #fff;
+    padding: 40px 0;
+    font-family: Arial, sans-serif;
+  }
+  
+  .footer-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    align-items: start;
+    max-width: 1200px;
+    margin: auto;
+    padding: 0 20px;
+  }
+}
+
+.arroba {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  box-sizing: border-box;
+  background-color: black;
+  color: white;
+  border-bottom: 1px solid #444;
+}
